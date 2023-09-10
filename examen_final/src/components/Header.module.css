@@ -1,0 +1,48 @@
+.header {
+    padding:10px;
+    font-size:14px;
+    background-color:rgb(51, 74, 250);
+    color: white;
+    text-align: center;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header img{
+    height: 50px;
+    align-items: center;
+  }
+
+  .header nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-arround;
+  }
+
+  .header nav ul li{
+    color:rgb(214, 214, 224);
+    text-decoration: none;
+    padding: 10px;
+    list-style-type: none;
+  }
+
+  .header nav ul li a{
+    color:rgb(214, 214, 224);
+    text-decoration: none;
+    font-size:14px;
+    font-weight: bolder;
+  }
+
+  .header button{
+    background-color:rgb(214, 214, 224);
+    color: rgb(51, 74, 250);
+    border-radius: 15px;
+    border-style: double solid black;
+    padding: 10px;
+    font-size:14px;
+    font-weight: bolder;
+    align-items: center;
+  }
