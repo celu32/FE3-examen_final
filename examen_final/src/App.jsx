@@ -13,8 +13,8 @@ function App() {
     
     <>
       <Header/>
-      <Outlet />
-      <Section/>
+      <Outlet /> 
+      <Section> </Section>
       <Footer/>
     </>
        

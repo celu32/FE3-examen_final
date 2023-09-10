@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <img src="./DH.png" alt='DH-logo' />
+      <Link to="/home"><img src="./DH.png" alt='DH-logo' /></Link>
       <nav>
         <ul>
           <li><Link to="/home">HOME</Link></li>

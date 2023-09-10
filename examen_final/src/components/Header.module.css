@@ -40,7 +40,8 @@
     background-color:rgb(214, 214, 224);
     color: rgb(51, 74, 250);
     border-radius: 15px;
-    border-style: double solid black;
+    border: 10px solid rgb(51, 74, 250) ;
+    border-style: double ;
     padding: 10px;
     font-size:14px;
     font-weight: bolder;
