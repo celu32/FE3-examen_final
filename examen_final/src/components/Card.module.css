@@ -2,18 +2,42 @@
     text-align: center;
     font-size:18px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     margin: 30px;
-    padding: 50px;
+    padding: 20px;
     border: solid 10px rgb(51, 74, 250) ;
     border-style: double;
     border-radius: 15px; 
-    width:400px;
+    width:350px;
+    height: 490px;
     justify-content: space-arround;
     align-items: center;
+}
+
+.card img{
+    width: 100%;
 }
 
 .card a{
     text-decoration: none;
     color: rgb(51, 74, 250);
+    padding: 5px;
+}
+
+.card a:hover{
+    background-color: grey;
+}
+
+.card button {
+    background-color: rgb(214, 214, 224);
+    border: none;
+}
+
+.card button img{
+    width: 25px;
+}
+
+.card button img:hover{
+    width: 30px;
 }

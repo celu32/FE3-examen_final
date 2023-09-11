@@ -43,7 +43,7 @@
 }
 
 .contact form button{
-    background-color: rgb(51, 74, 250);;
+    background-color: rgb(51, 74, 250);
     color:rgb(214, 214, 224);
     border-radius: 15px;
     border: 10px solid rgb(214, 214, 224) ;
@@ -52,4 +52,8 @@
     font-size:14px;
     font-weight: bolder;
     align-items: center;
+}
+
+.contact form button:hover{
+    background-color: grey;
 }

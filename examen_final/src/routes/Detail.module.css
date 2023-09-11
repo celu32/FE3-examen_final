@@ -1,0 +1,31 @@
+.detail{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgb(214, 214, 224);
+    align-items: center;
+}
+
+.detail img{
+    width: 40%;
+    padding: 50px;
+    background-color: rgb(214, 214, 224); 
+}
+
+.detail div{
+    padding: 100px;
+    font-size: 16px;
+    color: rgb(51, 74, 250); 
+    background-color: rgb(214, 214, 224); 
+    text-align: center;
+}
+
+.detail div h2{
+    font-size: 40px;
+}
+
+.detail div ul li{
+    font-size: 26px;
+    text-decoration: none;
+    list-style-type: none;
+}

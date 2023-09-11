@@ -4,7 +4,7 @@
     background-color:rgb(51, 74, 250);
     color: white;
     text-align: center;
-    height: 50px;
+    height: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -27,13 +27,23 @@
     text-decoration: none;
     padding: 10px;
     list-style-type: none;
+    width: 150px;
+  }
+
+  header nav ul li:hover{
+    background-color: grey;
+    border-radius: 15px;
+    border: 10px solid rgb(214, 214, 224) ;
+    border-style: double ;
   }
 
   .header nav ul li a{
     color:rgb(214, 214, 224);
     text-decoration: none;
     font-size:14px;
-    font-weight: bolder;
+    font-weight: bold;
+    width: 100%;
+    display: inline-block;
   }
 
   .header button{
@@ -44,6 +54,14 @@
     border-style: double ;
     padding: 10px;
     font-size:14px;
-    font-weight: bolder;
+    font-weight: bold;
     align-items: center;
+    width: 200px;
+  }
+
+  .header button:hover{
+    font-size:14px;
+    font-weight: bolder;
+    background-color: grey;
+    
   }
