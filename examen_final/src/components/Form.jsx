@@ -13,12 +13,12 @@ const Form = (props) => {
     function validar(event){
       event.preventDefault()
   
-        if (nombre.trim().length >= 1 && email.includes('@') ){
+        if (nombre.trim().length > 5 && email.includes('@') && email.includes('.') ){
             setMensaje ('')
             props.agregar(nombre,email)
         }
         else {
-            setMensaje ('Por favor chequea que la información sea correcta')
+            setMensaje ('Por favor verifique que la información ingresada sea correcta')
             props.agregar('','')
         }
 
@@ -28,7 +28,7 @@ const Form = (props) => {
     return (
 
         <form onSubmit={validar} >
-            <label htmlFor="nombre">INGRESA TU NOMBRE</label>
+            <label htmlFor="nombre">INGRESA TU NOMBRE Y APELLIDO </label>
             <input 
                 type="text" 
                 id="nombre" 

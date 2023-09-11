@@ -1,0 +1,19 @@
+.card{
+    text-align: center;
+    font-size:18px;
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    padding: 50px;
+    border: solid 10px rgb(51, 74, 250) ;
+    border-style: double;
+    border-radius: 15px; 
+    width:400px;
+    justify-content: space-arround;
+    align-items: center;
+}
+
+.card a{
+    text-decoration: none;
+    color: rgb(51, 74, 250);
+}

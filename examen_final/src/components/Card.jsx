@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-
 import React from "react";
-
+import {Link} from "react-router-dom"
+import styles from './Card.module.css'
 
 const Card = ({ name, username, id }) => {
 
@@ -11,11 +11,13 @@ const Card = ({ name, username, id }) => {
   }
 
   return (
-    <div className="card">
-        {/* En cada card deberan mostrar en name - username y el id */}
-
-        {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
-
+    <div className={styles.card}> 
+      <Link to="/dentist/:id">
+          <p> ID: {id} </p>
+          <p> APELLIDO: {name} </p>
+          <p> NOMBRE: {username} </p>
+      </Link>
+      
         {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
         <button onClick={addFav} className="favButton">Add fav</button>
     </div>

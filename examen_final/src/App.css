@@ -1,8 +1,13 @@
-.section {
-    padding:30px;
-    font-size:14px;
-    text-align: center;
-    height: 500px;
+.home{
+  padding:30px;
+  text-align: center;
+  background-color:rgb(214, 214, 224);
+  color: rgb(51, 74, 250);
+}
+
+
+.card-grid {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
   }

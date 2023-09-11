@@ -21,7 +21,6 @@ const Header = () => {
       <nav>
         <ul>
           <li><Link to="/home">HOME</Link></li>
-          <li><Link to="/dentist/:id">ODONTÓLOGO ELEGIDO</Link></li>
           <li><Link to="/favs">FAVORITOS</Link></li>
           <li><Link to="/contacto">CONTACTO</Link></li>
         </ul>
