@@ -1,15 +1,26 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext} from 'react';
+import React, { useState, useEffect} from 'react';
 import Card from '../components/Card'
-import { Context } from '../context/ContextProvider';
+
 
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 
 const Home = () => {
-  
-  const datos = useContext(Context)
+
+  const [datos, setDatos] = useState([]);
+  const getData = async () => {
+    const data = await
+    fetch('https://jsonplaceholder.typicode.com/users')
+    const convert = await data.json();
+    setDatos(convert)
+    }
+
+  useEffect(() => {
+      getData();
+  }, []);
+
 
   return (
    

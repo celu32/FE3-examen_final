@@ -16,7 +16,6 @@ const Card = ({ name, id }) => {
           <img src="./doctor.jpg" alt='imagen_doctor' />
           <p> {name} </p>
       </Link>
-      
         {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
         <button onClick={addFav} className="favButton"><img src="./fav.png" alt='fav' /></button>
     </div>

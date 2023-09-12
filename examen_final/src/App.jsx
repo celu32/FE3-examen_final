@@ -4,24 +4,24 @@ import './App.css'
 import { Outlet} from "react-router-dom"
 import Footer from './components/Footer'
 import Header from './components/Header'
-import { ContextProvider } from './context/ContextProvider'
+import { useContext } from 'react';
+import { Context } from './context/ContextProvider';
 
 
 function App() {
   
+  const {theme} = useContext(Context);
+
   return (
-    <>
-      <Header/>
-      <ContextProvider>
-        <Outlet />
-      </ContextProvider>
-      <Footer/>
-    </>
-    
-     
+    <div className={theme}>
+        <Header/>
+        <Outlet/>
+        <Footer/>
+    </div>
     
   )
 }
 
 export default App
 
+/*<Route index element={<div>index page</div>} />*/

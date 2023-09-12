@@ -3,17 +3,12 @@
 // eslint-disable-next-line no-unused-vars
 import styles from './Header.module.css'
 import {Link} from "react-router-dom"
-
+import { useContext } from 'react';
+import { Context } from '../context/ContextProvider';
 
 const Header = () => {
 
-  
-
-  const onClick = () => {
-    
-
-    };
-   
+  const {changeTheme} = useContext(Context);
 
   return (
     <header className={styles.header}>
@@ -24,10 +19,8 @@ const Header = () => {
           <li><Link to="/favs">FAVORITOS</Link></li>
           <li><Link to="/contacto">CONTACTO</Link></li>
         </ul>
-        {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
-        {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
       </nav>
-      <button onClick={onClick} className={styles.section} >Change theme</button>
+      <button onClick={changeTheme} className={styles.section} >Change theme</button>
     </header>
     
   )

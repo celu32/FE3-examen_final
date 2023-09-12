@@ -9,12 +9,13 @@ import Home from './routes/Home.jsx'
 import Detail from './routes/Detail.jsx'
 import Contact from './routes/Contact.jsx'
 import Favs from './routes/Favs.jsx'
+import { ContextProvider } from './context/ContextProvider'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-
-    <BrowserRouter>
+    <ContextProvider>
+      <BrowserRouter>
         <Routes>
             <Route path='/' element={<App/>}>
               <Route path='/home' element={<Home/>} />
@@ -24,6 +25,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             </Route>
         </Routes>
     </BrowserRouter>
+    </ContextProvider>
+    
     
   </React.StrictMode>
 

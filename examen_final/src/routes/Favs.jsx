@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
 import Card from "../components/Card";
+import React, { useContext } from "react";
+import { Context } from "../context/ContextProvider";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 

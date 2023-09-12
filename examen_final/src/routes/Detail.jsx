@@ -1,31 +1,36 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext} from 'react';
-import { Context } from '../context/ContextProvider';
+import React, { useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom'
 import styles from './Detail.module.css'
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Detail = () => {
- 
-  const datos = useContext(Context);
+
   const params = useParams();
 
-  console.log(params)
+  const [datos, setDatos] = useState([]);
+  const getData = async () => {
+    const data = await
+    fetch('https://jsonplaceholder.typicode.com/users/'+ params.id)
+    const convert = await data.json();
+    setDatos(convert)
+    }
 
-  const odontologo = datos.find((element) => element.id == params.id);
+  useEffect(() => {
+      getData();
+  });
 
-  console.log(odontologo)
 
   return (
     <div className={styles.detail}>
       <img src='/doctor.jpg' alt='imagen_doctor' />
       <div> 
-        <h2> {odontologo.name} </h2>
+        <h2> {datos.name} </h2>
         <ul>
-          <li>Email: {odontologo.email} </li>
-          <li>Phone: {odontologo.phone}</li>
-          <li>Website: {odontologo.website}</li>
+          <li>Email: {datos.email} </li>
+          <li>Phone: {datos.phone}</li>
+          <li>Website: {datos.website}</li>
         </ul>
       </div>
       

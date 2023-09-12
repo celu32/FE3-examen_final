@@ -3,28 +3,49 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 
-import { createContext, useState, useEffect} from "react";
+import { createContext, useReducer} from "react";
 
 export const Context = createContext(undefined)
 
+const getThemeFromStorage = () => {
+    const localTheme = localStorage.getItem("theme")
+    return localTheme ? localTheme : [];
+}
+
+const setThemeInStorage = (theme) => {
+    localStorage.setItem("theme", theme);
+}
+
+export const themeReducer = (state, action) => {
+    let theme 
+    switch (action.type) {
+        
+        case "CHANGE_THEME":
+            if (state == 'light') {
+                theme = 'dark'
+                setThemeInStorage(theme);
+                return theme;
+            }
+            else{
+                theme = 'light'
+                setThemeInStorage(theme);
+                return theme;
+            }
+        default:
+            return state;
+    }
+};
+
 export function ContextProvider({children}){
 
-    const [datos, setDatos] = useState([]);
-    const getData = async () => {
-      const data = await
-      fetch('https://jsonplaceholder.typicode.com/users')
-      const convert = await data.json();
-      setDatos(convert)
-      }
-  
-    useEffect(() => {
-        getData();
-    }, []);
-
-    const value = datos
+    const [theme, dispatch] = useReducer( themeReducer, [], getThemeFromStorage );
+    
+    const changeTheme = () => dispatch({ type: "CHANGE_THEME", payload:
+    getThemeFromStorage });
+    
 
     return(
-        <Context.Provider value={value}>
+        <Context.Provider value={{theme, changeTheme}}>
             {children}
         </Context.Provider>  
     )
@@ -32,5 +53,35 @@ export function ContextProvider({children}){
 
 
 
+/*
 
+export function ContextProvider({children}){
+
+    const getThemeFromStorage = () => {
+        const localTheme = localStorage.getItem("theme")
+        return localTheme ? localTheme : [];
+    }
+
+    const setThemeInStorage = (theme) => {
+        localStorage.setItem("theme", theme);
+    }
+
+    const [theme, setTheme] = useState(getThemeFromStorage());
+
+    useEffect(() => {
+        setThemeInStorage(theme);
+    }, [theme]);
+
+    const changeTheme = (theme) => {
+        setTheme(theme)
+    };
+
+    return(
+        <Context.Provider value={{theme, changeTheme}}>
+            {children}
+        </Context.Provider>  
+    )
+}
+
+*/
 

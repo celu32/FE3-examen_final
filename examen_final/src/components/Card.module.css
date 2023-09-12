@@ -5,12 +5,11 @@
     flex-wrap: wrap;
     flex-direction: column;
     margin: 30px;
-    padding: 20px;
     border: solid 10px rgb(51, 74, 250) ;
     border-style: double;
     border-radius: 15px; 
-    width:350px;
-    height: 490px;
+    width:300px;
+    height: 400px;
     justify-content: space-arround;
     align-items: center;
 }
@@ -23,10 +22,11 @@
     text-decoration: none;
     color: rgb(51, 74, 250);
     padding: 5px;
+    margin: 20px;
 }
 
 .card a:hover{
-    background-color: grey;
+    margin: 30px
 }
 
 .card button {
