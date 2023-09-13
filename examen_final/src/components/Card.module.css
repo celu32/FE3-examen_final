@@ -9,9 +9,15 @@
     border-style: double;
     border-radius: 15px; 
     width:300px;
-    height: 400px;
+    height: 450px;
     justify-content: space-arround;
     align-items: center;
+    background-color: rgb(170, 167, 167);
+}
+
+.card p {
+    font-size: 20px;
+    margin: 10px;
 }
 
 .card img{
@@ -30,14 +36,15 @@
 }
 
 .card button {
-    background-color: rgb(214, 214, 224);
+    background-color: rgb(170, 167, 167);
     border: none;
+    fill: rgb(51, 74, 250);
+    width: 100% ;
 }
 
-.card button img{
-    width: 25px;
+.card button SVG:hover{
+    font-size: 16px;
 }
 
-.card button img:hover{
-    width: 30px;
-}
+
+

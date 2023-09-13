@@ -3,7 +3,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 
-import { createContext, useReducer} from "react";
+import { createContext, useReducer } from "react";
 
 export const Context = createContext(undefined)
 
@@ -53,35 +53,5 @@ export function ContextProvider({children}){
 
 
 
-/*
-
-export function ContextProvider({children}){
-
-    const getThemeFromStorage = () => {
-        const localTheme = localStorage.getItem("theme")
-        return localTheme ? localTheme : [];
-    }
-
-    const setThemeInStorage = (theme) => {
-        localStorage.setItem("theme", theme);
-    }
-
-    const [theme, setTheme] = useState(getThemeFromStorage());
-
-    useEffect(() => {
-        setThemeInStorage(theme);
-    }, [theme]);
-
-    const changeTheme = (theme) => {
-        setTheme(theme)
-    };
-
-    return(
-        <Context.Provider value={{theme, changeTheme}}>
-            {children}
-        </Context.Provider>  
-    )
-}
-
-*/
+   
 

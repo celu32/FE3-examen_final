@@ -24,4 +24,4 @@ function App() {
 
 export default App
 
-/*<Route index element={<div>index page</div>} />*/
+

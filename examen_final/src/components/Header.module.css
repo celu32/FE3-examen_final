@@ -1,4 +1,4 @@
-.header {
+.headerlight {
     padding:10px;
     font-size:14px;
     background-color:rgb(51, 74, 250);
@@ -10,24 +10,39 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  .headerdark {
+    padding:10px;
+    font-size:14px;
+    color: white;
+    text-align: center;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(37,37,37);
+  }
   
-  .header img{
+  header img{
     height: 50px;
     align-items: center;
+   
   }
 
-  .header nav ul{
+  header nav ul{
     display: flex;
     flex-direction: row;
     justify-content: space-arround;
   }
-
-  .header nav ul li{
+ 
+  header nav ul li{
     color:rgb(214, 214, 224);
     text-decoration: none;
     padding: 10px;
     list-style-type: none;
     width: 150px;
+ 
   }
 
   header nav ul li:hover{
@@ -37,7 +52,7 @@
     border-style: double ;
   }
 
-  .header nav ul li a{
+  header nav ul li a{
     color:rgb(214, 214, 224);
     text-decoration: none;
     font-size:14px;
@@ -46,7 +61,7 @@
     display: inline-block;
   }
 
-  .header button{
+  header button{
     background-color:rgb(214, 214, 224);
     color: rgb(51, 74, 250);
     border-radius: 15px;
@@ -59,9 +74,15 @@
     width: 200px;
   }
 
-  .header button:hover{
+  .headerdark button{
+    border: 10px solid rgb(37,37,37); 
+    border-style: double ;
+    color: rgb(37,37,37); 
+  }
+
+  header button:hover{
     font-size:14px;
     font-weight: bolder;
     background-color: grey;
-    
   }
+

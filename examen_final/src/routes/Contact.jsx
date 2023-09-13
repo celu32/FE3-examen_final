@@ -5,7 +5,6 @@ import { useState } from 'react'
 import styles from './Contact.module.css'
 
 
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Contact = () => {
 

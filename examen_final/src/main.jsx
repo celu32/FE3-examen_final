@@ -18,16 +18,15 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <BrowserRouter>
         <Routes>
             <Route path='/' element={<App/>}>
-              <Route path='/home' element={<Home/>} />
-              <Route path='/dentist/:id' element={<Detail/>} />
+              <Route index element={<img src='./public/1.jpg' className='principal'/>} />
+                <Route path='/home' element={<Home/>} />
+                <Route path='/dentist/:id' element={<Detail/>} />
               <Route path='/favs' element={<Favs/>} /> 
               <Route path='/contacto' element={<Contact/>} /> 
             </Route>
         </Routes>
-    </BrowserRouter>
+      </BrowserRouter>
     </ContextProvider>
-    
-    
   </React.StrictMode>
 
 );

@@ -8,10 +8,18 @@ import { Context } from '../context/ContextProvider';
 
 const Header = () => {
 
-  const {changeTheme} = useContext(Context);
+  const {theme, changeTheme} = useContext(Context);
+
+  let clase;
+  if(theme == 'dark'){
+    clase = styles.headerdark
+  }
+  else{
+    clase = styles.headerlight;
+  }
 
   return (
-    <header className={styles.header}>
+    <header className={clase}>
       <Link to="/home"><img src="./DH.png" alt='DH-logo' /></Link>
       <nav>
         <ul>

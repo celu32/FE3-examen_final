@@ -1,5 +1,5 @@
 .dark{
-  background-color: rgb(37,37,37);
+  background-color: rgb(56, 56, 56);
   color:rgb(214, 214, 224) ;
 }
 
@@ -8,16 +8,22 @@
   color: rgb(51, 74, 250);
 }
 
-
-
 .home{
   padding:30px;
   text-align: center;
 }
 
-
 .card-grid {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-  }
+}
+
+.principal{
+  width: 100%;
+}
+
+.dark .principal{
+  opacity: 40%;
+}
+
