@@ -23,7 +23,8 @@ const Detail = () => {
 
 
   return (
-    <div className={styles.detail}>
+   
+      <div className={styles.detail}>
       <img src='/doctor.jpg' alt='imagen_doctor' />
       <div> 
         <h2> {datos.name} </h2>
@@ -33,8 +34,10 @@ const Detail = () => {
           <li>Website: {datos.website}</li>
         </ul>
       </div>
-      
     </div>
+    
+    
+    
   )
 }
 

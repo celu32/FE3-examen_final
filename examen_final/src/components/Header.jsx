@@ -20,7 +20,7 @@ const Header = () => {
 
   return (
     <header className={clase}>
-      <Link to="/home"><img src="./DH.png" alt='DH-logo' /></Link>
+      <Link to="/"><img src="./DH.png" alt='DH-logo' /></Link>
       <nav>
         <ul>
           <li><Link to="/home">HOME</Link></li>

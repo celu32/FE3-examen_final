@@ -20,6 +20,7 @@ const Home = () => {
   return (
    
     <main className="home" >
+      <img src='./8.jpg' />
       <h1>Nuestros Profesionales</h1>
       <div className='card-grid'>
         {datos.map(odontologo => (

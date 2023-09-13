@@ -19,11 +19,15 @@ const Contact = () => {
     if(nombre == '' && email == '' ){
 
       return (
-        <div className={styles.contact}>
-          <h2>¿NECESITAS MAS INFORMACION?</h2>
-          <p>Dejanos tus datos y te contactaremos</p>
-          <Form agregar = {handleSubmit}/>
+        <div className={styles.contacto} >
+          <img src='./4.jpg' />
+          <div className={styles.contact}>
+            <h2>¿NECESITAS MAS INFORMACION?</h2>
+            <p>Dejanos tus datos y te contactaremos</p>
+            <Form agregar = {handleSubmit}/>
+          </div>
         </div>
+        
       )
 
     }

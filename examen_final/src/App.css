@@ -1,3 +1,8 @@
+
+*{
+  font-family:Arial, Helvetica, sans-serif;
+}
+
 .dark{
   background-color: rgb(56, 56, 56);
   color:rgb(214, 214, 224) ;
@@ -8,7 +13,7 @@
   color: rgb(51, 74, 250);
 }
 
-.home{
+.home, .fav{
   padding:30px;
   text-align: center;
 }
@@ -20,10 +25,14 @@
 }
 
 .principal{
-  width: 100%;
+  width: 55%;
+  display: center;
 }
 
 .dark .principal{
   opacity: 40%;
 }
 
+.home img, .fav img{
+  width: 50%;
+}
