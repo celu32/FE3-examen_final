@@ -5,12 +5,11 @@ import { Link } from "react-router-dom"
 import styles from './Card.module.css'
 
 
-const Card = ({ id, name, username }) => {
-
+const Card = (props) => {
 
   const [favorito, setFavorito] = useState(false);
 
-  let ruta = './doctor'+ id +'.jpg'
+  let ruta = './doctor'+ props.id +'.jpg'
 
   const addFav = (id, name, username) => {
 
@@ -31,17 +30,17 @@ const Card = ({ id, name, username }) => {
 
     localStorage.setItem('fav', JSON.stringify(fav))
 
+    props.setOdontologos(fav)
+
   };
 
   useEffect(() => {
    
     const localStorageFav = localStorage.getItem('fav')
 
-    
-
     let fav = JSON.parse(localStorageFav) || []
 
-    const index = fav.findIndex(item => item.id === id)
+    const index = fav.findIndex(item => item.id === props.id)
 
     if (index !== -1) {
       setFavorito(true)
@@ -49,18 +48,18 @@ const Card = ({ id, name, username }) => {
     else {
       setFavorito(false) 
     }
-  }, [id])
+  }, [props.id])
 
 
   return (
     <div className={styles.card} > 
-      <Link to={"/dentist/"+id} >
+      <Link to={"/dentist/"+props.id} >
           <img src={ruta} alt='imagen_doctor' />
-          <p> {name} </p>
-          <p> {username} </p>
+          <p> {props.name} </p>
+          <p> {props.username} </p>
       </Link>
         
-    <button onClick={()=>addFav( id, name, username )} className="favButton">  {favorito ? (
+    <button onClick={()=>addFav( props.id, props.name, props.username )} className="favButton">  {favorito ? (
           <svg height="2em" viewBox="0 0 512 512">
             <path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" /> </svg>
         ) : (

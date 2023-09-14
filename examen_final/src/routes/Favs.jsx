@@ -5,12 +5,7 @@ import React, { useState , useEffect } from "react";
 
 const Favs = () => {
     
-  const [odontologos, setOdontologos] = useState(JSON.parse(localStorage.getItem('fav')) || [])
-
-  useEffect(() => {
-    setOdontologos(JSON.parse(localStorage.getItem('fav')) || [] )
- 
-   }, [localStorage.getItem('fav')])
+  const [odontologos, setOdontologos] = useState(JSON.parse(localStorage.getItem('fav')) || []);
  
   return (
     <div className="fav">
@@ -18,7 +13,7 @@ const Favs = () => {
       <h1>FAVORITOS</h1>
       <div className='card-grid'>
       {odontologos.map(odontologo => (
-          <Card key={odontologo.id} name={odontologo.name} username={odontologo.username} id={odontologo.id}/>
+          <Card key={odontologo.id} name={odontologo.name} username={odontologo.username} id={odontologo.id} setOdontologos={setOdontologos}/>
         ))}
       </div>
     </div>
@@ -27,3 +22,5 @@ const Favs = () => {
 
 export default Favs;
 
+
+  

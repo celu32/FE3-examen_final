@@ -48,7 +48,7 @@ const Form = (props) => {
                 value={telefono} onChange={(e) => setTelefono (e.target.value)} 
             />
             <button type="submit"> ENVIAR </button>
-            {mensaje ? <p> {mensaje} </p> : null}
+            {mensaje ? <p className="mensaje"> {mensaje} </p> : null}
         </form>
 
          

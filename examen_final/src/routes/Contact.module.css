@@ -69,3 +69,8 @@
 .contact form button:hover{
     background-color: grey;
 }
+
+.contact form p{
+    font-size:14px;
+    color: rgb(192, 2, 2);
+}
