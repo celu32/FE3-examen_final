@@ -21,7 +21,7 @@ const Home = () => {
    
     <main className="home" >
       <img src='./8.jpg' />
-      <h1>Nuestros Profesionales</h1>
+      <h1>NUESTROS PROFESIONALES</h1>
       <div className='card-grid'>
         {datos.map(odontologo => (
           <Card key={odontologo.id} name={odontologo.name} username={odontologo.username} id={odontologo.id} />

@@ -1,20 +1,24 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import Card from "../components/Card";
 import React, { useState , useEffect } from "react";
 
 const Favs = () => {
     
-  const localStorageFav = localStorage.getItem('fav');
+  const [odontologos, setOdontologos] = useState(JSON.parse(localStorage.getItem('fav')) || [])
 
-  let odontologos = JSON.parse(localStorageFav) || [];
-  
+  useEffect(() => {
+    setOdontologos(JSON.parse(localStorage.getItem('fav')) || [] )
+ 
+   }, [localStorage.getItem('fav')])
+ 
   return (
     <div className="fav">
       <img src='./8.jpg' />
-      <h1>Favoritos</h1>
+      <h1>FAVORITOS</h1>
       <div className='card-grid'>
       {odontologos.map(odontologo => (
-          <Card key={odontologo.id} name={odontologo.name} username={odontologo.username} id={odontologo.id} />
+          <Card key={odontologo.id} name={odontologo.name} username={odontologo.username} id={odontologo.id}/>
         ))}
       </div>
     </div>

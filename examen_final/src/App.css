@@ -36,3 +36,7 @@
 .home img, .fav img{
   width: 50%;
 }
+
+.dark .home img, .dark .fav img{
+  opacity: 70%;
+}
