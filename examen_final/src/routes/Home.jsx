@@ -5,6 +5,7 @@ import Card from '../components/Card'
 const Home = () => {
 
   const [datos, setDatos] = useState([]);
+
   const getData = async () => {
     const data = await
     fetch('https://jsonplaceholder.typicode.com/users')
@@ -24,7 +25,7 @@ const Home = () => {
       <h1>NUESTROS PROFESIONALES</h1>
       <div className='card-grid'>
         {datos.map(odontologo => (
-          <Card key={odontologo.id} name={odontologo.name} username={odontologo.username} id={odontologo.id} />
+          <Card key={odontologo.id} name={odontologo.name} username={odontologo.username} id={odontologo.id}/>
         ))}
       </div>
     </main>

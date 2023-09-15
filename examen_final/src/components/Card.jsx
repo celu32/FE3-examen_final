@@ -30,7 +30,10 @@ const Card = (props) => {
 
     localStorage.setItem('fav', JSON.stringify(fav))
 
-    props.setOdontologos(fav)
+    if(props.setOdontologos){
+      props.setOdontologos(fav)
+    }
+    
 
   };
 
