@@ -9,6 +9,8 @@ const Detail = () => {
 
   const {id} = useParams();
 
+  let ruta = '../doctor'+ id +'.jpg'
+
   const [datos, setDatos] = useState([]);
   const getData = async () => {
     const data = await
@@ -25,7 +27,7 @@ const Detail = () => {
   return (
    
       <div className={styles.detail}>
-      <img src='/doctor.jpg' alt='imagen_doctor' />
+      <img src={ruta} alt='imagen_doctor' />
       <div> 
         <h2> {datos.name} </h2>
         <ul>
